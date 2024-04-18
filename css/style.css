@@ -73,8 +73,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer {
-	max-width: 1440px;
-	margin: 0 auto;
 	display: block;
 	background-color: var(--navy-blue);
 	background-size: 1440px;
@@ -300,8 +298,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .team {
-	max-width: 1440px;
-	margin: 0 auto;
 	background: var(--CLOUD, #F4F4FD);
 	background-size: 1440px;
 	padding: 120px 0;
