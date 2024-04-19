@@ -382,6 +382,12 @@ h1, h2, h3, h4, h5, h6, p {
 	height: 40px;
 }
 
+.socials-link:hover,
+.socials-link:focus {
+	background-color: var(--ocean);
+}
+
+
 .social-icon {
 	fill: white;
 }
