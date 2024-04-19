@@ -367,9 +367,6 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: center;
     gap: 24px;
 }
-.social-item {
-
-}
 
 .socials-link {
 	display: flex;
@@ -387,9 +384,51 @@ h1, h2, h3, h4, h5, h6, p {
 	background-color: var(--ocean);
 }
 
-
 .social-icon {
 	fill: white;
+}
+
+.container-customers {
+	padding: 120px 0;
+}
+
+.customers-title {
+	margin-bottom: 72px;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+.customers-list {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+
+.customers-item {
+	border-radius: 4px;
+	border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+}
+
+.customers-item:hover,
+.customers-item:focus{
+	border: 1px solid var(--OCEAN, #404BBF);
+}
+
+.customers-icon {
+	display: inline-flex;
+	padding: 9px 9px 6px 11px;
+	justify-content: center;
+	align-items: center;
+	fill: var(--light-slate);
+}
+
+.customers-icon:hover,
+.customers-icon:focus{
+	fill: var(--ocean);
 }
 
 /* portfolio */
