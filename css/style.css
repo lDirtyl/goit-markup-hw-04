@@ -13,6 +13,8 @@
 	--dairy: #fcfcfc;
 	--font-family: "Roboto", sans-serif;
 	--second-family: "Raleway", sans-serif;
+	--trns-slow: 600ms ease-out;
+	--trns-fast: 300ms ease-in;
 }
 
 *,
@@ -547,13 +549,9 @@ h1, h2, h3, h4, h5, h6, p {
 	line-height: 1.5;
 	letter-spacing: 0.32px;
 	background: var(--IRIS, #4D5AE5);
-	transform: translateY(300px);
-	transition: 400ms ease-in 0s;
+	transform: translateY(100%);
+	transition: var(--trns-slow);
 	transition-property: transform;
-	-webkit-transition: 400ms ease-in 0s;
-	-moz-transition: 400ms ease-in 0s;
-	-ms-transition: 400ms ease-in 0s;
-	-o-transition: 400ms ease-in 0s;
 }
 
 .portfolio-item:hover .overlay {
@@ -589,27 +587,44 @@ h1, h2, h3, h4, h5, h6, p {
 	inset: 0;
 	background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
 	backdrop-filter: blur(2px);
+	transition: var(--trns-slow);
+	transition-property: opacity, visibility;
+	transition-delay: 0ms
 }
 
 .backdrop.is-hidden {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	transition-delay: 500ms;
 }
 
 .modal {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%) scale(1);
 	width: 408px;
 	min-height: 584px;
 	border-radius: 4px;
-	background: var(--DAIRY, #FCFCFC);
+	background-color: var(--DAIRY, #FCFCFC);
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	transition-property: transform, opacity;
+	transition-delay: 600ms;
 }
+
+.backdrop.is-hidden .modal{
+	transform: translateX(-50%) translateY(-50%) scale(0.3);
+	opacity: 0;
+	transition-delay: 0ms;
+}
+
 .modal-btn {
 	position: absolute;
+	width: 24px;
+	height: 24px;
 	top: 24px;
 	right: 24px;
 	display: flex;
@@ -617,10 +632,14 @@ h1, h2, h3, h4, h5, h6, p {
 	align-items:center;
 	padding: 0;
 	background-color: transparent;
-	border: none;
+	border: solid 1px rgba(0, 0, 0, 0.10);
+	border-radius: 50%;
+	background: var(--CORNFLOWER, #E7E9FC);
+	
 }
 .modal-btn-icon {
-	fill: var(--CORNFLOWER, #E7E9FC);
-	stroke-width: 1px;
-	stroke: rgba(0, 0, 0, 0.10);
+	fill: var(--navy-blue);
+
+	flex-shrink: 0;
+
 }
