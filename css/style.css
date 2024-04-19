@@ -188,14 +188,10 @@ h1, h2, h3, h4, h5, h6, p {
 	height: 4px;
 	border-radius: 2px;
 	background: var(--OCEAN, #404BBF);
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-o-border-radius: 2px;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.current.nav-link:hover,
+.current.nav-link:focus {
 	color: var(--ocean);
 }
 
@@ -532,10 +528,37 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: center;
 }
 
-.portfolio-item {
+.portfolio-item-wrapper {
+	position: relative;
+	overflow: hidden;
 }
 
-.portflio-item-link {
+.overlay {
+	position: absolute;
+	padding: 40px 32px;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: var(--CLOUD, #F4F4FD);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.32px;
+	background: var(--IRIS, #4D5AE5);
+	transform: translateY(300px);
+	transition: 400ms ease-in 0s;
+	transition-property: transform;
+	-webkit-transition: 400ms ease-in 0s;
+	-moz-transition: 400ms ease-in 0s;
+	-ms-transition: 400ms ease-in 0s;
+	-o-transition: 400ms ease-in 0s;
+}
+
+.portfolio-item:hover .overlay {
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
 }
 
 .item-descr {
@@ -559,4 +582,45 @@ h1, h2, h3, h4, h5, h6, p {
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: var(--slate);
+}
+
+.backdrop {
+	position: fixed;
+	inset: 0;
+	background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+	backdrop-filter: blur(2px);
+}
+
+.backdrop.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 408px;
+	min-height: 584px;
+	border-radius: 4px;
+	background: var(--DAIRY, #FCFCFC);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+}
+.modal-btn {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+.modal-btn-icon {
+	fill: var(--CORNFLOWER, #E7E9FC);
+	stroke-width: 1px;
+	stroke: rgba(0, 0, 0, 0.10);
 }
