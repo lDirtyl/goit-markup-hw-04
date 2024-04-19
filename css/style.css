@@ -103,6 +103,50 @@ h1, h2, h3, h4, h5, h6, p {
 	letter-spacing: 0.02em;
 	color: var(--cloud);
 }
+
+.footer-list {
+	display: flex;
+	gap: 120px;
+}
+
+.footer-social-title {
+	display: flex;
+	margin-bottom: 16px;
+	color: var(--WHITE, #FFF);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.32px;
+}
+
+.footer-social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-socials-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: var(--IRIS, #4D5AE5);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+	background-color: var(--GREEN, #31D0AA);
+}
+
+.footer-social-icon {
+	fill: white;
+}
+
 /* header */
 
 .header {
