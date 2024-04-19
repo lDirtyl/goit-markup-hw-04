@@ -255,7 +255,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .features-item {
+	
 	flex-basis: calc(100% - 24px / 4);
+}
+
+.features-icon-wrapper {
+	display: flex;
+	position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    background: #F4F4FD;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .features-title {
